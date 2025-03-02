@@ -1245,3 +1245,14 @@
     background: var(--bs-dark) !important;
 }
 /*** copyright end ***/
+
+/* new  */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.image-container img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+}

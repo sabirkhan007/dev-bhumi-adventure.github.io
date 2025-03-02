@@ -29,6 +29,51 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>
+           
+            .container {
+                width: 80%;
+                margin: auto;
+                padding: 20px;
+                /* background: #fff; */
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                margin-top: 30px;
+            }
+            .itinerary-day {
+                background: #eef2ff;
+                margin: 10px 0;
+                padding: 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .itinerary-content {
+                display: none;
+                padding: 15px;
+                background: #ffffff;
+                border-left: 3px solid #4a90e2;
+                margin-bottom: 10px;
+            }
+            .active {
+                display: block;
+            }
+
+            .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #333;
+        }
+        </style>
     </head>
 
     <body>
@@ -114,49 +159,84 @@
         </div>
         <!-- Header End -->
 
-        <section id="itinerary">
-            <h2>Kedarnath Tour Package - 5 Days & 4 Nights</h2>
-            
-            <div class="day">
-                <h3>Day 1: Arrival in Haridwar & Transfer to Guptkashi</h3>
-                <p>Meet our representative at Haridwar and drive towards Guptkashi. Enjoy the scenic views of Devprayag and Rudraprayag. Check-in at the hotel and relax. Overnight stay in Guptkashi.</p>
-            </div>
-            
-            <div class="day">
-                <h3>Day 2: Guptkashi to Kedarnath</h3>
-                <p>Early morning drive to Sonprayag, then take a local vehicle to Gaurikund. Begin your trek to Kedarnath (16 km). Optionally, take a pony or helicopter. Reach Kedarnath and visit the sacred Kedarnath Temple. Overnight stay in Kedarnath.</p>
-            </div>
-            
-            <div class="day">
-                <h3>Day 3: Kedarnath to Guptkashi</h3>
-                <p>Attend the morning aarti at Kedarnath Temple. After breakfast, trek down to Gaurikund and drive back to Guptkashi. Relax at the hotel and enjoy the peaceful surroundings. Overnight stay in Guptkashi.</p>
-            </div>
-            
-            <div class="day">
-                <h3>Day 4: Guptkashi to Rishikesh</h3>
-                <p>After breakfast, drive towards Rishikesh. Visit famous places like Laxman Jhula, Ram Jhula, and Parmarth Niketan. Attend the evening Ganga Aarti. Overnight stay in Rishikesh.</p>
-            </div>
-            
-            <div class="day">
-                <h3>Day 5: Departure from Rishikesh to Haridwar</h3>
-                <p>Enjoy breakfast and spend leisure time in Rishikesh. Later, drive back to Haridwar for your departure.</p>
-            </div>
-        </section>
+        <div class="container">
+            <h2>About the Package</h2>
+            <p>Experience the spiritual journey to Kedarnath, one of the most revered temples in India. This tour covers scenic locations, comfortable accommodations, and a guided pilgrimage.</p>
+        </div>
         
-        <section id="cancellation-policy">
-            <h2>Cancellation Policy</h2>
-            <ul>
-                <li>30 days before departure: 90% refund</li>
-                <li>15-30 days before departure: 50% refund</li>
-                <li>7-15 days before departure: 25% refund</li>
-                <li>Less than 7 days: No refund</li>
-            </ul>
-            <p>Note: Refunds are processed within 7-10 business days.</p>
-        </section>
-        
+        <div class="image-container">
+            <img src="img/carousel-3.jpg" alt="Kedarnath Tour Package">
+        </div>
 
- 
- 
+        <!-- short itn  -->
+
+        <div class="container">
+            <h2>Short Itinerary</h2>
+            <ul>
+                <li>Day 1 : Dehradun -Sankri/ Mandal [drive:7-8 hrs Distance:188kms/3hrs]</li>
+                <li>Day 2: Sankri -Juda [Trek: -4-5hrs]</li>
+                <li>Day 3: Juda - Kedarkantha Base /Shepherd' Hurts[ Trek:3-4hrs]</li>
+                <li>Day 4: Kedarkantha Base - Kedarkantha Summit and descend -Juda [Trek:7]</li>
+                <li>Day 5: Juda ka Talab -Sankri- to Dehradun[Trek: 4km]</li>
+            </ul>
+        </div>
+
+<!-- end  -->
+
+<!-- detail iti  -->
+
+        <div class="container">
+            <h2>Kedarnath Tour Package - Itinerary</h2>
+            <div class="itinerary">
+                <div class="itinerary-day" onclick="toggleItinerary('day1')">Day 1:  Dehradun -Sankri/ Mandal [drive:7-8 hrs Distance:188kms/3hrs]<i class="fas fa-chevron-down"></i></div>
+                <div id="day1" class="itinerary-content">
+                    <p>The thrilling trek towards Kedarkantha begins from Dehradun city. Our representative meets you at the Dehradun Railway Station at 7:00 a.m. From here, drive alongside the scenic views of river Yamuna and hill towns like Purola and Mori to reach Sankri/Mandal at around 4:00 p.m.. On arrival at Sankri/Mandal check into you cozyguest house/Campsite. The day is yours to explore the culture and local cuisines this place has to offer.Get back to your stay and have a good sleep as the day you waited for starts tomorrow.</p>
+                </div>
+                
+                <div class="itinerary-day" onclick="toggleItinerary('day2')">Day 2: Sankri -Juda [Trek: -4-5hrs] <i class="fas fa-chevron-down"></i></div>
+                <div id="day2" class="itinerary-content">
+                    <p>Post breakfast, trek 4 kms to the camping base - Juda Ka Talab and reach there in about 5 hours. The trekking trail crosses streams and dense oak forests, rising through which you reach the pictorial spot of Jadu Ka Talab. Halt for a day and enjoy photography andb camping at this beautiful scenery.</p>
+                </div>
+                
+                <div class="itinerary-day" onclick="toggleItinerary('day3')">Day 3:  Juda - Kedarkantha Base /Shepherd' Hurts[ Trek:3-4hrs] <i class="fas fa-chevron-down"></i></div>
+                <div id="day3" class="itinerary-content">
+                    <p>Post breakfast, ascend towards Kedarkantha base which will take about 3 to 4 hours. Pass through the dense pine and oak forests and shepherds’ huts upon open meadows.Take in the fascinating views of an arc-shaped range of snow-capped mountains comprising of Bandarpoonch, Swargarohini, Kala Nag and Ranglana - you will reach the Kedarkantha Base by the day. After reaching the base, heck into the camps and enjoy the scenery of snow-capped mountains, clear skies as well as a mesmerizing sunset over the mighty Himalayas.</p>
+                </div>
+                
+                <div class="itinerary-day" onclick="toggleItinerary('day4')">Day 4:  Kedarkantha Base - Kedarkantha Summit and descend -Juda [Trek:7] <i class="fas fa-chevron-down"></i></div>
+                <div id="day4" class="itinerary-content">
+                    <p>The long awaited day begins as you make your final climb towards the Kedarkantha summit.The day starts early with the Sunrise from the Kedarkantha meadows and a filling breakfast.You trek through the forest till the end, as the Kedarkantha peak appears closer and the vegetation starts to disappear. After some more trek, you reach the summit. At an elevation of 12,500, stand tall and shout out aloud “We did it”.Rest for sometime, and start the descend back towards Juda, and halt for the day there to celebrate.</p>
+                </div>
+                
+                <div class="itinerary-day" onclick="toggleItinerary('day5')">Day 5: Juda ka Talab -Sankri- to Dehradun[Trek: 4km]<i class="fas fa-chevron-down"></i></div>
+                <div id="day5" class="itinerary-content">
+                    <p>Post breakfast, start the descend towards sankri On the way, mesmerize the final glimpses of Har Ki Dun valley and capture the memories.Reach Sankri at around 12:00 p.m. to 1:00 pm .Depart for Dehradun. The distance approximatelytakes about 8 hours to reach. Scenic ambience and lovely surroundings mark the roads back to Dehradun city</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Terms & Conditions</h2>
+                <ul>
+                    <li>Booking confirmation requires an advance payment.</li>
+                    <li>Travel insurance is not included in the package.</li>
+                    <li>Hotel rooms are subject to availability.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Cancellation Policy</h2>
+                <ul>
+                    <li>More than 30 days before departure: Full refund.</li>
+                    <li>15-30 days before departure: 50% refund.</li>
+                    <li>Less than 15 days: No refund.</li>
+                </ul>
+            </div>
+        </div>
+
+   
+        
+     
+      
         
        <!-- Subscribe Start -->
         <div class="container-fluid subscribe py-5">
@@ -259,7 +339,16 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
         
-
+        <script>
+            function toggleItinerary(id) {
+                var content = document.getElementById(id);
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            }
+        </script>
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
