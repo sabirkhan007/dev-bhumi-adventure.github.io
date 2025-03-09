@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Phulara Ridge Trek | Dev Bhumi Adventures</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            /* background: #fff; */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .itinerary-day {
+            background: #eef2ff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .itinerary-content {
+            display: none;
+            padding: 15px;
+            background: #ffffff;
+            border-left: 3px solid #4a90e2;
+            margin-bottom: 10px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+                            class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+                            class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="tel:+7906800129">
+                        <i class="fa-solid fa-phone fw-normal"></i>
+                    </a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                        href="mailto:info@example.com">
+                        <i class="fa-solid fa-envelope fw-normal"></i>
+                    </a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://wa.me/7906800129"
+                        target="_blank">
+                        <i class="fa-brands fa-whatsapp fw-normal"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <!-- <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Dev Bhumi Adventures</h1> -->
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="services.html" class="nav-item nav-link">Services</a>
+                    <a href="packages.html" class="nav-item nav-link active">Packages</a>
+                    <!-- <a href="blog.html" class="nav-item nav-link">Blog</a> -->
+                    <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="destination.html" class="dropdown-item">Destination</a>
+                                <a href="tour.html" class="dropdown-item">Explore Tour</a>
+                                <a href="booking.html" class="dropdown-item">Travel Booking</a>
+                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
+                                <a href="guides.html" class="dropdown-item">Travel Guides</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div>
+                        </div> -->
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="https://wa.me/7906800129" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h3 class="text-white display-3 mb-4">Phulara Ridge Trek</h1>
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-white">Phulara Ridge Trek</li>
+                </ol>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div class="container">
+        <h2>Phulara Ridge Trek</h2>
+
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item"><strong>📍 Region:</strong> Uttarakhand</li>
+                <li class="list-group-item"><strong>🗓️ Trek Duration:</strong> 06 Days</li>
+                <li class="list-group-item"><strong>⚡ Trek Difficulty:</strong> Easy to Moderate</li>
+                <li class="list-group-item"><strong>⛰️ Max Altitude:</strong> 3,690m / 12,106 ft</li>
+                <li class="list-group-item"><strong>🚶‍♂️ Approx Trekking Distance:</strong> On foot 23 km | By taxi 420
+                    km</li>
+                <li class="list-group-item"><strong>🚉 Nearest Transport Hubs:</strong> Dehradun (Bus/Railway
+                    Station/Airport)</li>
+                <li class="list-group-item"><strong>🌤️ Best Time to Visit:</strong> All Year (Summer & Winter)</li>
+            </ul>
+        </div>
+
+        <p>
+            The Phulara Ridge Trek is probably the loveliest trip to be knowledgeable about Uttarakhand. Regardless of
+            whether you are maturing travelers or experienced ones, you will partake in the Phulara Ridge Trek most
+            assuredly. The excursion begins from Dehradun to Sankri and afterward to Phulara Ridge journey by
+            intersection different knolls and towns. The temperature here is low, and henceforth snow can be found in
+            the spring season too. However, the best an ideal opportunity to hit this spot is during May and June, or
+            you may likewise visit among September and November. There are different attractions present here which are
+            sufficient to pull the explorers here. The glades of Pushtara are one of them and merit encountering. The
+            rich green atmosphere welcomes voyagers worldwide to come and allow them to free in this the unstoppable
+            force of life's lap.
+        </p>
+    </div>
+
+    <div class="image-container">
+        <img src="img/carousel-3.jpg" alt="Kedarnath Tour Package">
+    </div>
+
+    <!-- short itn  -->
+
+    <div class="container">
+        <h2>Short Itinerary</h2>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">📅 <strong>Day 1:</strong> Drive Dehradun to Sankri (200 km, 9-10 hrs)</li>
+                <li class="list-group-item">🥾 <strong>Day 2:</strong> Sankri to Sikolta (5 km trek, 5-6 hrs)</li>
+                <li class="list-group-item">🥾 <strong>Day 3:</strong> Trek to Bhoj Gadi (4-5 hrs)</li>
+                <li class="list-group-item">🥾 <strong>Day 4:</strong> Trek to Pushtara over Phulara Ridge (6 hrs)</li>
+                <li class="list-group-item">🥾 <strong>Day 5:</strong> Trek to Taluka (4-5 hrs)</li>
+                <li class="list-group-item">🚗 <strong>Day 6:</strong> Drive from Sankri to Dehradun (200 km, 8-9 hrs)
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- end  -->
+
+    <!-- detail iti  -->
+
+    <div class="container">
+        <h2>Phulara Ridge Trek - Itinerary</h2>
+        <div class="itinerary">
+            <div class="itinerary-day" onclick="toggleItinerary('day1')">Day 1: Drive Dehradun to Sankri<i
+                    class="fas fa-chevron-down"></i></div>
+            <div id="day1" class="itinerary-content">
+                <p> The main day begins with full energy, fervor, and happiness from Dehradun to Sankri. The excursion
+                    to Phulara Ridge Trek begins from here. Around 198 km is to be voyaged, which requires around 8-9
+                    hours. In the midst of the outing to Sankri, you will hit amazing perspectives on Mori Naitwar,
+                    Nainbagh, Jarmola and Naugaon. Moreover, you will see different normal water streams, an assortment
+                    of verdure, and fauna. Subsequent to arriving at Sankri Village, you will experience a phenomenal
+                    dusk that will add to your extraordinary sweet recollections.</p>
+                <p>The town comprises of many shops and dhabas with conventional food. Individuals are so honest and
+                    amicable. You will without a doubt feel associated with this spot from the absolute first day. In
+                    the evening, you might wander around the nearby business sectors of the town, which looks incredible
+                    around evening time particularly.</p>
+            </div>
+
+            <div class="itinerary-day" onclick="toggleItinerary('day2')">Day 2: Sankri to Sikolta <i
+                    class="fas fa-chevron-down"></i></div>
+            <div id="day2" class="itinerary-content">
+                <p>On the subsequent day, you will head towards Sikolta from the Sankri Village. Sikolta, which is 2830
+                    meters above ocean level, is 4-5 hours from Sankri Village.</p>
+                <p>You will eat in Sankri in the early morning and afterward will begin the trip towards Sikolta. During
+                    the trip, you will see thick backwoods comprising of pinewood trees, pecan trees, and some more,
+                    which will give you an exciting experience. The excursion will be brimming with delight. You will
+                    see the snow-shrouded Himalayas, which will fill you with greater interest to proceed with your
+                    excursion further. Subsequent to arriving at Skilota, you will eat and go through the entire night
+                    during the tents in Sakolta.</p>
+                <p>In the wake of eating, we will start our journey to Sikolta and go through an adorable pine lush
+                    region. During the trip, you will discover flawless dark red lilies notwithstanding yellow bog
+                    marigold sprouting. After certain long periods of journeying, you might have an enthralling sight of
+                    snow-included mountains. Your supper and night stay might be planned for tents at Sikolta</p>
+            </div>
+
+            <div class="itinerary-day" onclick="toggleItinerary('day3')">Day 3: Trek to Bhoj Gadi<i
+                    class="fas fa-chevron-down"></i></div>
+            <div id="day3" class="itinerary-content">
+                <p> Day 3 will take you to Bhoj Gadi from Sikolta. Bhoj Gadi is situated at an elevation of 3400 m. The
+                    journey will be intended for 4 hours. The level of the journey will be from Easy-moderate. In the
+                    middle of the journey, you will actually want to see the eye-getting scenes of the Kedarkantha Peak.
+                    The vistas of other adjoining mountains and different glades will merit encountering. You can
+                    conceive starting here in time how excellent the further excursion could be.</p>
+                <p>Following 4 hours, you will arrive at Bhoj Gadi, and here you can partake in the remainder of the
+                    time. Each need will be given to the explorers every once in a while.</p>
+            </div>
+
+            <div class="itinerary-day" onclick="toggleItinerary('day4')">Day 4: Trek to Pushtara over Phulara ridge <i
+                    class="fas fa-chevron-down"></i></div>
+            <div id="day4" class="itinerary-content">
+                <p> This day you need to move towards Pushtara Meadows(2890 m)via Phulara Ridge(3690 m). The ideal
+                    opportunity for this journey is assessed at 5-6 hours. The climb could be a little difficult, so
+                    every one of the explorers are encouraged to keep their water bottles or sodas with them. You will
+                    encounter different Himalayan Monals in the middle of the trip. After you arrive at the highest
+                    point, you will be stunned to see the perspective on Hanuman Top, Bandarpoonch, and Swargarohini.
+                    The beautiful excellence of Pushtara Meadows and its lavish green region will make you become
+                    hopelessly enamored with this spot without a doubt.</p>
+            </div>
+
+            <div class="itinerary-day" onclick="toggleItinerary('day5')">Day 5: Trek to Taluka<i
+                    class="fas fa-chevron-down"></i></div>
+            <div id="day5" class="itinerary-content">
+                <p> This is the ideal opportunity to hinder and bid farewell to Phulara Ridge Trek. From Pushtara
+                    Meadows, you will get back to Sankri through Taluka. In the first place, you will trip to Taluka for
+                    around 4-5 hours and afterward drive to Sankri from Taluka for 60 minutes.</p>
+                <p>We encourage you to partake in this time most as this will be your last day of a particularly awesome
+                    journey. Try to have vistas of dawn. While journeying to Taluka, notice and appreciate everything.
+                    The thick backwoods of pine wood will assist you with recapturing your recollections. Subsequent to
+                    arriving at Taluka, we will head to Sankri.</p>
+            </div>
+            <div class="itinerary-day" onclick="toggleItinerary('day6')">DAY 6: Drive from Sankri to Dehradun<i
+                    class="fas fa-chevron-down"></i></div>
+            <div id="day6" class="itinerary-content">
+                <p> Hence forth, your get closed on this day. You will head to Dehradun from Sankri. After breakfast,
+                    you will travel and will arrive at Dehradun before sun-down. In any case, this isn't the end; there
+                    are all the more such journeys of Uttarakhand you need to find later on.</p>
+            </div>
+
+
+        </div>
+
+
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-primary text-white text-center">
+                <h3>✅ Inclusions</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">🏕️ Accommodation (Guest house, Home stay, Camping)</li>
+                    <li class="list-group-item">🥘 Meals while on trek (Veg + Egg)</li>
+                    <li class="list-group-item">🎒 Trek equipment: Sleeping bag, mattress, tent (twin sharing), kitchen & dining tent, toilet tent, utensils, and crampon (if required)</li>
+                    <li class="list-group-item">📜 All necessary permits and entry fees</li>
+                    <li class="list-group-item">🩺 First aid medical kits, stretcher, and oxygen cylinder</li>
+                    <li class="list-group-item">⛰️ Mountaineering qualified & professional trek leader, guide, and support staff</li>
+                    <li class="list-group-item">🐴 Mules to carry central luggage</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card shadow-lg border-0 mt-4">
+            <div class="card-header bg-danger text-white text-center">
+                <h3>❌ Exclusions</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">🚫 Any kind of personal expenses</li>
+                    <li class="list-group-item">🍽️ Food during transit</li>
+                    <li class="list-group-item">🛡️ Insurance</li>
+                    <li class="list-group-item">🐴 Mules or porters for personal luggage</li>
+                    <li class="list-group-item">⚠️ Anything not specifically mentioned under inclusions</li>
+                    <li class="list-group-item">🚑 Any kind of emergency evacuation charges</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card shadow-lg border-0 mt-4">
+            <div class="card-header bg-warning text-white text-center">
+                <h3>⚠️ Important Notes</h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">🎒 Normally, Trekshrek expects participants to carry their personal luggage. If you wish to offload your backpack, you can give it to a mule.</li>
+                    <li class="list-group-item">💰 Charges for offloading: ₹1200 if paid online (10 days in advance) or ₹1500 if paid at Sankri.</li>
+                    <li class="list-group-item">⚖️ Backpack weight limit: Maximum 11 kg. Must have a waterproof cover. Suitcases, strolleys, or non-trekking bags are not allowed.</li>
+                    <li class="list-group-item">📞 To book the Phulara Ridge Trek/adventure program, please use our online booking form or call us.</li>
+                    <li class="list-group-item">💳 For confirmation, a deposit is required.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="card shadow-lg border-0 mt-4">
+            <div class="card-header bg-danger text-white text-center">
+                <h3>❌ Cancellation Policy</h3>
+            </div>
+            <div class="card-body">
+                <p><strong>Terms for Cancellation & Refund:</strong></p>
+                <p>Customers are required to make a full payment in advance for confirmed bookings. In case of cancellation, the following refund policies will apply:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">📅 <strong>30+ days before trek:</strong> 50% refund</li>
+                    <li class="list-group-item">📅 <strong>25-29 days before trek:</strong> 40% refund</li>
+                    <li class="list-group-item">📅 <strong>20-24 days before trek:</strong> 30% refund</li>
+                    <li class="list-group-item">📅 <strong>15-19 days before trek:</strong> 20% refund</li>
+                    <li class="list-group-item">📅 <strong>10-14 days before trek:</strong> 10% refund</li>
+                    <li class="list-group-item">⏳ <strong>Less than 10 days:</strong> No refund</li>
+                </ul>
+                <p class="mt-3"><strong>⚠️ Important Note:</strong> After the given time frame, Trek Shrek will not entertain any cancellations, and no refunds will be provided.</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+    <!-- Subscribe Start -->
+    <div class="container-fluid subscribe py-5">
+        <div class="container text-center py-5">
+            <div class="mx-auto text-center" style="max-width: 900px;">
+                <h5 class="subscribe-title px-3">Do you know who we are?</h5>
+                <h1 class="text-white mb-4">We are something other than a Travel Agency...</h1>
+                <p class="text-white mb-5">At Dev Bhumi Adventure, traveling isn’t just a business—it’s our passion. As
+                    proud Uttarakhandis, we have an unbreakable bond with nature and a deep love for the Himalayas. Our
+                    mission is to take you beyond the usual tourist trails, exploring hidden gems untouched by the
+                    masses.
+                </p>
+                <div class="position-relative mx-auto">
+
+                    <button type="button"
+                        class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Let’s
+                        embark on an adventure together and explore every corner of the majestic Himalayas! 🌄✨</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Subscribe End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Get In Touch</h4>
+                        <a href=""><i class="fas fa-home me-2"></i> 11c engineers enclave jakhan near by lollipop
+                            preschool jakhan Pin 248001</a>
+                        <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
+                        <a href=""><i class="fas fa-phone me-2"></i> +91-7906800129</a>
+
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-share fa-2x text-white me-2"></i>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Dev humi Adventures</h4>
+                        <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                        <a href="services.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                        <a href="packages.html"><i class="fas fa-angle-right me-2"></i> Packages</a>
+                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white">Popular Packages</h4>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Chardham</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Kedarkantha</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Tungnath</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Har Ki Dun</a>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Bali Pass</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item">
+
+                        <h4 class="text-white mb-3">About Us</h4>
+                        <div class="footer-bank-card">
+                            <p class="text-white">
+                                Whether you seek the spiritual serenity of Char Dham Yatra or the adventure of trekking
+                                through Kedarkantha, Valley of Flowers, or Bali Pass, we ensure a safe, well-organized,
+                                and memorable journey.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-body py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <i class="fas fa-copyright me-2"></i><a class="text-white" href="index.html">Dev Bhumi
+                        Adventures</a>, All right reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-start">
+
+                    Designed By <a class="text-white" href="www.arbazalamagency.com">Arbaz Alam Agency</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i
+            class="fa fa-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        function toggleItinerary(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
