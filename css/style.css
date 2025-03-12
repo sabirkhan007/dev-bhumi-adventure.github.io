@@ -17,8 +17,8 @@
 
 .back-to-top {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 32px;
+    bottom: 54px;
     display: flex;
     width: 45px;
     height: 45px;
@@ -1256,3 +1256,87 @@
     height: auto;
     border-radius: 15px;
 }
+
+
+/* call and chat button  */
+
+
+.footer-share-kmy {
+    background:#fff0;
+    position:fixed;
+    left:0;
+    width:100%;
+    z-index:999;
+    /* box-shadow:0 -4px 10px rgba(0, 0, 0, .2); */
+    bottom:0
+    }
+    .footer-share-button a.query-form {
+    padding:8px 10px;
+    display:block;
+    border:1px solid #2c3848;
+    color:#fff;
+    float:left;
+    width:47%;
+    height:45px;
+    text-align:center;
+    line-height:28px;
+    font-weight:700;
+    margin:2% 0 2% 2%;
+    color:#2c3848;
+    border-radius:3px
+    }
+    .footer-share-button a.whatsapp {
+    padding: 8px 0;
+        display: block;
+        background:#25d366;
+        float: left;
+        width: 45%;
+        margin: 2% 0 2% 4%;
+        border-radius: 3px;
+        height: auto;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    
+    .footer-share-button a.call_btn_bottom {
+    padding: 8px 0;
+        display: block;
+        background:#1153a1;
+        float: left;
+        width: 45%;
+        margin: 2% 0 2% 2%;
+        border-radius: 3px;
+        height: auto;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    
+    .footer-share-button a.whatsapp img {
+    width:110px;
+    margin:0 auto;
+    display:block
+    }
+    @media only screen and (min-width:992px) {
+    .footer-share-kmy {
+    display:none
+    }
+    }
+
+
+    .btn-primary {
+        color: #fff;
+        background-color: #ef7f1b;
+        border-color: #101d29cf;
+    }
+    
+    .form-group {
+    margin-bottom: 1rem; }
+  
+  .form-text {
+    display: block;
+    margin-top: 0.25rem; }
+
