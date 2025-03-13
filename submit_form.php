@@ -37,12 +37,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
     // Send email and check if successful
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+   
+      // Set headers
+    $headers = "From: $name <$email>\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+    // Send email and check if successful
+    
+      if (mail($to, $subject, $body, $headers)) {
+        header("Location: thank_you.php"); // Redirect to thank you page
+        exit;
     } else {
-        echo "Failed to send message. Please try again later.";
+        echo "Error: Unable to send the message. Please check mail configuration.";
+        exit;
     }
+
 } else {
-    echo "Invalid request method.";
+    echo "Invalid request.";
+    exit;
 }
+   
 ?>
