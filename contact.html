@@ -149,46 +149,52 @@
                     </div>
                     <div class="col-lg-8">
                         <h3 class="mb-2">Send us a message</h3>
-                        <p class="mb-4">Have a query? </br> Fill out the form below and we'll get back to you as soon as possible.</p>
-                        <form>
+                        <p class="mb-4">Have a query? <br> Fill out the form below and we'll get back to you as soon as possible.</p>
+                        <form action="submit_form.php" method="POST">
                             <div class="row g-3">
+                                <!-- Name Field -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control border-0" id="name" name="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
+                                <!-- Email Field -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control border-0" id="email" name="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
+                                <!-- Mobile Number Field -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="number" class="form-control border-0" id="number" placeholder="Your Name">
-                                        <label for="name">Mobile Number</label>
+                                        <input type="tel" class="form-control border-0" id="number" name="number" placeholder="Mobile Number" required>
+                                        <label for="number">Mobile Number</label>
                                     </div>
                                 </div>
+                                <!-- Package Type Field -->
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="packages" placeholder="Your Email">
-                                        <label for="email">Package type</label>
+                                        <input type="text" class="form-control border-0" id="packages" name="packages" placeholder="Package Type">
+                                        <label for="packages">Package Type</label>
                                     </div>
                                 </div>
-                                
+                                <!-- Message Field -->
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
+                                        <textarea class="form-control border-0" id="message" name="message" placeholder="Leave a message here" style="height: 160px;" required></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
+                                <!-- Submit Button -->
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div>
+                    
                     <div class="col-12">
                         <div class="rounded">
                             <iframe class="rounded w-100" 
